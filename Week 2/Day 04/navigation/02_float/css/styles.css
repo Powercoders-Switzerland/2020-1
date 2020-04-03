@@ -1,0 +1,61 @@
+/* general styles */
+html {
+  background: black;
+	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {
+  font-size : 1.9rem;
+}
+
+/* center nav block within body - also vertically */
+nav {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 10rem;
+  margin: auto;
+  position: absolute;
+  width: 49.4%;
+}
+
+/* reset ul styles */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  color: #ffffff;
+  display: block;
+  opacity: 0.8;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+li {
+  margin: 1rem 2rem;
+}
+
+li.active a {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  color: red;
+  opacity: 1;
+}

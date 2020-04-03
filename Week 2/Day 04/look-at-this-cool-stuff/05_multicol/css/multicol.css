@@ -1,0 +1,12 @@
+/* use display property for layout and positioning */
+
+ul {
+  column-count: 2;
+  margin: 3.3rem 0;
+}
+
+li {
+  margin: 0 3.3rem 3.3rem;
+  vertical-align: top;
+  break-inside: avoid;
+}

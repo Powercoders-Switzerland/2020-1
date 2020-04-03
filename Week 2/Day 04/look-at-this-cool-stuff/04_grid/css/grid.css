@@ -1,0 +1,14 @@
+/* use display:grid for layout and positioning */
+/* grid container */
+ul {
+  display: grid;
+  /* define the number of columns */
+  grid-template-columns: 1fr 1fr;
+  /* define the number of rows */
+  grid-template-rows: 1fr 1fr;
+}
+
+/* grid items */
+li {
+  margin: 3.3rem;
+}

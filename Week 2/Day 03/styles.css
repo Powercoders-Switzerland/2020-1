@@ -1,0 +1,18 @@
+html {
+    font-size: 10px;
+    padding: 2em;
+}
+h2 {
+    color: #000;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 4.7rem;
+    font-weight: normal;
+    font-variant: small-caps;
+    line-height: 1.2;
+}
+h2::after {
+	content: "";
+	border-top: 8px solid #c32e4c;
+	width: 80px;
+	margin: 0 0 0.5em;
+}

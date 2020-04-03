@@ -1,0 +1,66 @@
+/* general styles */
+html {
+  background: lightgray;
+	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {
+  font-size : 1.9rem;
+}
+
+/* center main block within body */
+main {
+  background: white;
+  margin: 5rem auto;
+  max-width: 112rem;
+  padding: 5rem 2rem;
+  width: 90%;
+}
+
+/* reset ul styles */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgba(0,0,0,0.5);
+  font-weight: lighter;
+  margin-bottom : 3rem;
+  text-transform: uppercase;
+}
+
+h1 strong {
+  color: rgba(0,0,0,1);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+h2 {
+  color: rgba(0,0,0,0.5);
+  font-size : 2.4rem;
+  font-weight: normal;
+  margin : 2.5rem 0;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.45;
+  margin-bottom: 6rem;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #000000;
+  margin-bottom: 5rem;
+  padding: 2rem 8rem;
+  text-transform: uppercase;
+}

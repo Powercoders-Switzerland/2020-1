@@ -1,0 +1,19 @@
+/* use display:flex for layout and positioning */
+/* flex container */
+ul {
+  display: flex;
+  /* wrapping flex items (wrap or no-wrap) */
+  flex-wrap: wrap;
+  /* defining direction of flex items (row or coulmn) */
+  flex-direction: row;
+  /* aligning flex items (horizontal for row, vertical for column) */
+  justify-content: space-evenly;
+  /* aligning flex items (vertical for row, horizontal for column) */
+  align-items: center;
+}
+
+/* flex items */
+li {
+  /* defining how each flex item grows or shrinks */
+  flex: 0;
+}

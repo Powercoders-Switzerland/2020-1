@@ -1,0 +1,27 @@
+/* use display property for layout and positioning */
+
+li {
+  display: inline-block;
+  margin: 3.3rem;
+  vertical-align: top;
+  /* why not width: 50% ? */
+  width: 45.6%;
+  width: calc(50% - 6.6rem);
+}
+
+
+.parent {
+  position : relative;
+}
+
+.child {
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  width: 50%;
+
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+}

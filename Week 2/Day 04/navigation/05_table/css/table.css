@@ -1,0 +1,13 @@
+/* use display:table for layout and positioning */
+ul {
+  display: table;
+  /* li margin is ignored on table-cells, use margin on parent for top and bottom space */
+  margin: 1rem 0;
+}
+
+/* cells */
+li {
+  display: table-cell;
+  /* li margin is ignored on table-cells, use padding for left and right space */
+  padding: 0 2rem;
+}

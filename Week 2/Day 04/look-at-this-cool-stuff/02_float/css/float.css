@@ -1,0 +1,24 @@
+/* use float property for layout and positioning */
+/* compare with display.css - where is the button? */
+/* when elements are floated, the parent height is not calculated correctly by the browser */
+
+.clearfix:before,
+.clearfix:after {
+ content:"";
+ display:table;
+}
+
+.clearfix:after {
+ clear:both;
+}
+
+.clearfix {
+ *zoom:1;
+}
+
+li {
+  float: left;
+  margin: 3.3rem;
+  width: 45.6%;
+  width: calc(50% - 6.6rem);
+}

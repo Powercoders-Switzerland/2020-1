@@ -1,0 +1,43 @@
+/* use display:flex for layout and positioning */
+/* flex container */
+main {
+  display: flex;
+  /* wrapping flex items (wrap or nowrap) */
+  flex-wrap: wrap;
+  /* defining direction of flex items (row or column) */
+  flex-direction: row;
+  /* aligning flex items (horizontal for row, vertical for column) */
+  justify-content: space-evenly;
+  /* aligning flex items (vertical for row, horizontal for column) */
+  align-items: flex-start;
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* flex items */
+aside {
+  flex: 1;
+}
+
+article {
+  flex: 2;
+  margin-left: 8%;
+}
+
+dt {
+  flex: 1;
+  max-width: 5%;
+  padding-bottom: 1rem;
+}
+
+dd {
+  flex: 9;
+  min-width: 82%;
+  padding: 0 10% 1rem 0;
+}

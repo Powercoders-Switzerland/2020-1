@@ -1,0 +1,29 @@
+/* use display property for layout and positioning */
+
+aside {
+  display: inline-block;
+  vertical-align: top;
+  width: 32%;
+}
+
+article {
+  display: inline-block;
+  margin-left: 8%;
+  vertical-align: top;
+  width: 58%;
+}
+
+dt {
+  display: inline-block;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  vertical-align: top;
+  width: 5%;
+}
+
+dd {
+  display: inline-block;
+  padding: 0 10% 1rem 0;
+  vertical-align: top;
+  width: 80%;
+}

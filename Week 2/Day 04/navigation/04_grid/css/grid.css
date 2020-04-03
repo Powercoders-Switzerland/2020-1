@@ -1,0 +1,12 @@
+/* use display:grid for layout and positioning */
+/* grid container */
+ul {
+  display: grid;
+  grid-auto-flow: column;
+  /* define the number of rows */
+  grid-template-rows: 1fr;
+}
+
+/* grid items */
+li {
+}

@@ -1,0 +1,5 @@
+/* use display property for layout and positioning */
+
+li {
+  display: inline-block;
+}

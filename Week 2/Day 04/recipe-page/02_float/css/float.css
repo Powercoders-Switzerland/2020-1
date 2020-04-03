@@ -1,0 +1,44 @@
+/* use float property for layout and positioning */
+
+.clearfix:before,
+.clearfix:after {
+ content:"";
+ display:table;
+}
+
+.clearfix:after {
+ clear:both;
+}
+
+.clearfix {
+ *zoom:1;
+}
+
+aside {
+  float: left;
+  vertical-align: top;
+  width: 32%;
+}
+
+article {
+  float: right;
+  margin-left: 8%;
+  vertical-align: top;
+  width: 58%;
+}
+
+dt {
+  clear: right;
+  float: left;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  vertical-align: top;
+  width: 5%;
+}
+
+dd {
+  float: right;
+  padding: 0 10% 1rem 0;
+  vertical-align: top;
+  width: 80%;
+}
