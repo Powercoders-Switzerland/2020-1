@@ -12,6 +12,7 @@ h2 {
 }
 h2::after {
 	content: "";
+	display: block;
 	border-top: 8px solid #c32e4c;
 	width: 80px;
 	margin: 0 0 0.5em;
