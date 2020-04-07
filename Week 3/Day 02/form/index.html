@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form example</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main>
+        <h1>Profil</h1>
+        <h2>Hier können Sie Ihre Adress-Angaben einsehen und anpassen.</h2>    
+        <form action="index.html" method="post">
+            <fieldset>
+                <legend>Persönliche Daten</legend> 
+                <label for="Titel">Titel</label>
+                <input type="text" id="Titel" name="Titel" value="" placeholder="optional">
+                
+                
+                <label for="FirstName">Vorname</label>
+                <input type="text" id="FirstName" name="FirstName" value="Peter" required>
+                <span class="error-only">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                        <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                    </svg>
+                </span>
+                
+                
+                <label for="LastName">Nachname</label>
+                <input type="text" id="LastName" name="LastName" value="Muster" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span>     
+                
+                
+                <label for="Geschlecht">Geschlecht</label>
+                <ul role="group" aria-labelledby="Geschlecht">
+                    <li>
+                        <input type="radio" name="Geschlecht" value="w" id="GeschlechtW" required>
+                        <label for="GeschlechtW">w</label>
+                        <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                            <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                        </svg></span>
+                    </li>
+                    <li>
+                        <input type="radio" name="Geschlecht" value="m" id="GeschlechtM" checked="">
+                        <label for="GeschlechtM">m</label>
+                    </li>
+                </ul> 
+                
+                
+                <label for="Sprache">Sprache</label>
+                <ul role="group" aria-labelledby="Sprache" class="three">
+                    <li>
+                        <input type="radio" name="Sprache" value="deutsch" id="SpracheDE" required checked="">
+                        <label for="SpracheDE">de</label>
+                        <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                            <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                        </svg></span>
+                    </li>
+                    <li>
+                        <input type="radio" name="Sprache" value="französisch" id="SpracheFR">
+                        <label for="SpracheFR">fr</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="Sprache" value="italienisch" id="SpracheIT">
+                        <label for="SpracheIT">it</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Kontaktdaten</legend> 
+                
+                
+                <label for="TelefonG">Telefon</label>
+                <input type="tel" name="TelefonG" value="" pattern="^(?:0|\(?\+41\)?\s?|0041\s?)(21|22|24|26|27|31|32|33|34|41|43|44|51|52|55|56|58|61|62|71|74|76|77|78|79|81|91)(?:[\.\-\s]?\d\d\d)(?:[\.\-\s]?\d\d){2}$" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span>
+                
+                
+                <label for="Mobile">Mobile</label>
+                <input type="tel" name="Mobile" value="" placeholder="optional" pattern="^(?:0|\(?\+41\)?\s?|0041\s?)(21|22|24|26|27|31|32|33|34|41|43|44|51|52|55|56|58|61|62|71|74|76|77|78|79|81|91)(?:[\.\-\s]?\d\d\d)(?:[\.\-\s]?\d\d){2}$">              
+                
+                
+                <label for="Hauptnr">Hauptnummer</label>
+                <input type="tel" name="Hauptnr" value="" placeholder="optional" pattern="^(?:0|\(?\+41\)?\s?|0041\s?)(21|22|24|26|27|31|32|33|34|41|43|44|51|52|55|56|58|61|62|71|74|76|77|78|79|81|91)(?:[\.\-\s]?\d\d\d)(?:[\.\-\s]?\d\d){2}$">              
+                
+                
+                <label for="Fax_G">Fax</label>
+                <input type="tel" name="Fax_G" value="" placeholder="optional" pattern="^(?:0|\(?\+41\)?\s?|0041\s?)(21|22|24|26|27|31|32|33|34|41|43|44|51|52|55|56|58|61|62|71|74|76|77|78|79|81|91)(?:[\.\-\s]?\d\d\d)(?:[\.\-\s]?\d\d){2}$">
+                
+                
+                <label for="MailG">Mail 1</label>
+                <input type="email" name="MailG" value="" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span> 
+                
+                
+                <label for="Mail2">Mail 2</label>
+                <input type="email" name="Mail2" value="" placeholder="optional">
+                
+            </fieldset>
+            <fieldset>
+                <legend>Adressdaten</legend>
+                
+                <label for="CompanyName">Firma</label>
+                <input type="text" name="CompanyName" value="" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span>
+                
+                
+                <label for="Zusatz2">Zusatz Firma</label>
+                <input type="text" name="Zusatz2" value="" placeholder="optional">
+                
+                
+                <label for="Homepage">Homepage</label>
+                <input type="website" name="Homepage" value="" placeholder="optional">
+                
+                
+                <label for="Adresse">Adresse / Haus Nr</label>
+                <input class="list middle" type="text" name="Adresse" value="" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span>    
+                <input class="list small" type="text" name="HausNr" value="" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span>                        
+                
+                
+                <label for="Zusatz1">Zusatz Adresse</label>
+                <input type="text" name="Zusatz1" value="" placeholder="optional">               
+                
+                
+                <label for="Postfach">Postfach</label>
+                <input type="text" name="Postfach" value="" placeholder="optional">
+                
+                
+                <label for="PLZ">PLZ / Ort</label>
+                <input class="list small" type="text" name="PLZ" value="" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span>                        
+                <input class="list middle" type="text" name="Ort" value="" required>
+                <span class="error-only"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-circle-error">
+                    <use xlink:href="img/sprite.svg#si-glyph-circle-error"></use>
+                </svg></span>           
+                
+                
+                <label for="Kanton">Kanton / Land</label>
+                <input class="list small" type="text" name="Kanton" value="" placeholder="optional">     
+                <input class="list middle" type="text" name="Land" value="" placeholder="optional">
+                
+                <button type="submit">Speichern</button>
+                
+            </fieldset>
+            
+        </form>
+
+    </main>
+</body>
+</html>
