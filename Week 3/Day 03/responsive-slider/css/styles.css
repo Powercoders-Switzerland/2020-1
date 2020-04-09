@@ -1,0 +1,61 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+ul {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;  
+    scroll-behavior: smooth;
+}
+
+li {    
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(26, 117, 23);
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;	
+}
+
+li:nth-of-type(odd) {
+    background: rgb(68, 71, 114);
+}
+
+a {
+    bottom : 10vh;
+    left: 45vw;
+    margin: auto;
+    position: fixed;
+}
+
+a + a {
+    left: 46vw;
+}
+a + a + a {
+    left: 47vw;
+}
+a + a + a + a {
+    left: 48vw;
+}
+a + a + a + a + a {
+    left: 49vw;
+}

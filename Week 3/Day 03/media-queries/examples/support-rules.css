@@ -1,0 +1,6 @@
+/* check for modern css properties with support. */
+@supports (display: flex){
+}
+
+@supports (display: grid){
+}

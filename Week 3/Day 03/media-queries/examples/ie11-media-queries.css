@@ -1,0 +1,7 @@
+/* target only IE11: instead of article use your own selectors, but always start with *::-ms-backdrop,  */
+@media all and (-ms-high-contrast:none) {
+	*::-ms-backdrop, 
+	article {
+	  
+	} 
+}
