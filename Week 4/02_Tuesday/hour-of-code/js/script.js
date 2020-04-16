@@ -23,6 +23,19 @@ billAmount = parseFloat(Math.ceil(billAmount*20)/20);
 tipRate = parseFloat(tipRate);
 excludeVAT = parseFloat(excludeVAT);
 
+if(isNaN(billAmount)){
+    billAmount = prompt("Please enter your bill amount as number, e.g. 230.50");
+    billAmount = parseFloat(Math.ceil(billAmount*20)/20);
+}
+if(isNaN(tipRate)){
+    tipRate = prompt("Please enter the tip rate as number, e.g. 15 for 15%");
+    tipRate = parseFloat(tipRate);
+}
+if(isNaN(excludeVAT)){
+    excludeVAT = prompt("Please enter the VAT as number if you want to exclude it, e.g. 18 for 18%");
+    excludeVAT = parseFloat(excludeVAT);
+}
+
 //debug
 console.log(billAmount);
 console.log(tipRate);
