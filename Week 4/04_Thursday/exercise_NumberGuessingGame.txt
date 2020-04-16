@@ -1,0 +1,34 @@
+Start NumberGuessingGame
+    Initialize lowRange = 1;
+	Initialize highRange = 100;
+	Initialize possibleGuesses = highRange + lowRange - 1;
+	Initialize maxTurns = (log(possibleGuesses)/log(2)) + 1; // = log base 2 of possible guesses by rules of logarithms
+	Initialize yourGuess;
+	Initialize playerAnswer;
+    Initialize countNumTurns = 1;
+
+	Display "Choose a number from " + lowRange + " to "+ highRange +".";
+
+	//This loops through the algorithm
+	Do
+    	possibleGuesses = highRange + lowRange - 1;
+		yourGuess = Math.ceil(possibleGuesses / 2.0);
+
+		Prompt for playerAnswer with "Is your number higher than or equal to " + yourGuess + "?";
+
+		If(playerAnswer == true) //Guess was equal or higher
+		    Prompt for playerAnswer with "Is your number equal to " + yourGuess + "?";
+            If(playerAnswer == true)
+                break Do While loop;
+            Else
+                highRange = yourGuess - 1;
+            End
+        Else // Guess was too low
+            lowRange = yourGuess + 1;
+        End
+        
+        countNumTurns++;
+	While(countNumTurns <=maxTurns);
+
+    Display "Your number is " + yourGuess
+End
