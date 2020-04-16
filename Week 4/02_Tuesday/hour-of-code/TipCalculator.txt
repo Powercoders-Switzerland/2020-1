@@ -1,0 +1,33 @@
+TipCalculator
+    Initialize billAmount = 0
+    Initialize tipRate = 0
+    Initialize tip = 0
+    Initialize totalAmount = 0
+    Initialize excludeVAT = 18
+    Initialize billAmountExVAT = 0
+
+    Prompt billAmount with "Please enter your bill amount as number, e.g. 230.50"
+    Prompt tipRate with "Please enter the tip rate as number, e.g. 15%"
+    Prompt excludeVAT with "Do you want to exlude the VAT (18%)"
+
+    Validate if billAmount is an integer or decimal
+    Validate if tipRate is an integer or decimal
+
+    Convert billAmount to decimal in format 00.00 rounding up to the nearest 0.05 step (Rappen)
+    Convert tipRate to decimal in format 00.00 rounding up
+
+    
+    If excludeVAT is yes
+        billAmountExVAT = billAmount - (billAmount * excludeVat / 100)
+        tip = billAmountExVAT * tipRate / 100
+    Else
+        tip = billAmount * tipRate / 100
+    End
+
+    Convert tip to decimal in format 00.00 rounding up to the nearest 0.05 step (Rappen)
+
+    totalAmount = billAmount + tip
+
+    Display "Calculated tip to pay (in CHF): " + tip
+    Display "Calculated total amount to pay  is " + totalAmount + " CHF."
+End
