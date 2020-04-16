@@ -1,0 +1,59 @@
+Input: 2 positive numbers
+Procedure: Euclaid algorithm
+Output: greatest common divisor = GCD
+
+Test cases / Examples:
+=======================
+Input: -1 / 2
+Expected result: error message after validation
+
+Input: 4 / 0
+Expected result: error message after validation
+
+Input: 2 / 2
+Expected result: 2
+
+Input: 40 / 16
+Expected result: 
+#1 % #2
+========
+40 % 16 = 8
+16 % 8 = 0
+8 GCD
+
+16 % 40 = 16
+40 % 16 = 8
+16 % 8 = 0
+
+Input: 2.7 / 4.5
+Expected result: error message after validation
+
+
+Procedure
+===========
+Start
+    Initialize firstNumber = 0;
+    Initialize secondNumber = 0;
+    Initialize GCD = 0;
+    Initialize Remainder = 0;
+
+    Prompt for firstNumber with "Please put in your first positive integer";
+    Prompt for secondNumber with "Please put in your second positive integer";
+
+    Validate that firstNumber and secondNumber are positive integers;
+
+    //Modulo Calculation of GCD
+    Loop until Remainder = 0
+        firstNumber % secondNumber = Remainder;
+        If Remainder == 0
+            GCD = secondNumber;
+            End Loop;
+        Else
+            firstNumber = secondNumber;
+            secondNumber = Remainder; 
+        End
+    End
+    //would be a do while loop with condition at the end
+
+    Display as "The greater common divisor of " + firstNumber + " and " + secondNumber + " is " + GCD;
+End
