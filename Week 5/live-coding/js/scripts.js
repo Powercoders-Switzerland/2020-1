@@ -27,8 +27,31 @@ let newsfeed = [
     }
 ];
 
+var array = ["Banana", "Apples", "Oranges", "Blueberries"];
+console.log(array[2]);
+//array.shift();
+array.splice(0,1);
+array.sort();
+array.push("Kiwi");
+array.splice(0,1);
+array.reverse();
+console.log(array);
+
 // check if user login is correct then show news feed.
 
+const obj = {
+    name: "Susanne",
+    age: 38,
+    experience: 13
+  }
+  
+  
+  const { name, age } = obj;
+  let {experience } = obj;
+
+ // alert(name);
+ // alert(age);
+ // alert(experience);
 //let username = prompt("What is your user name?");
 //let password = prompt("What is your password?");
 //signIn(username,password);
@@ -36,6 +59,16 @@ let newsfeed = [
 function signIn(user,pass){
     if(isUserValid(user,pass)){
         console.log(newsfeed);
+        for(let i = 0; i < newsfeed.length; i++){
+            let obj = newsfeed[i];
+            /*Object.keys(obj).forEach(function(news){
+                document.write(`${newsfeed[i][news]}<br>`);
+                document.write(obj[news]+"<br>");
+            });*/
+            Object.values(obj).forEach(function(news){
+                document.write(news+"<br>");
+            });
+        }
     } else {
         alert("Your login details are not correct.");
     }
@@ -43,17 +76,19 @@ function signIn(user,pass){
 
 // Mark / secretive
 function isUserValid(usr,pw){
-    f/*or(let i = 0;i < database.length;i++){    
+    /*for(let i = 0;i < database.length;i++){    
         if(usr === database[i].username && pw === database[i].password) {
             return true;
         }  
-    }  */
-    database.forEach(function(user){   
-        if(usr === user.username && pw === user.password) {
-            return true;
+    }*/
+    let isUserValid = false;
+    database.forEach(function(user){  
+        if(usr === user.username && pw === user.password) {  
+            isUserValid = true;
         } 
     });
-    return false;
+    console.log(isUserValid);
+    return isUserValid;
 }
 
 /* while */
