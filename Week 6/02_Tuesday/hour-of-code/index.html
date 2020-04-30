@@ -1,10 +1,18 @@
+<!--
+	1. Add a button to HTML
+	2. Declare variable for button in JS
+	3. Add event listener to click event of button
+	4. declare function to randomize numbers for color inputs
+	-> give rgb values as input values, not hex
+	-> randomize 3 numbers per input value: r is between 0 and 255, g 0-255, b 0-255 - Math.random()
+-->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Gradient Background</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body id="gradient">
+<body id="gradient" style="background: linear-gradient(to right, #ff0000, #eeff00);">
 	<h1>Background Generator</h1>
 	<input class="color1" type="color" name="color1" value="#00ff00">
 	<input class="color2" type="color" name="color2" value="#ff0000">
