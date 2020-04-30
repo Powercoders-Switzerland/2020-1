@@ -5,20 +5,18 @@
     "https://images.unsplash.com/photo-1587575494201-11fe74d90d38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
 ];*/
 /** We will use an API to dynamically load images from another website */
-/**
- * 1. declare an empty variable for our images
- * 2. fetch the images from external site via API
- * 3. parse the JSON response of API
- * 4. loop through JSON object and get url
- * 5. store url in variable
- */
 
+//1. declare an empty variable for our images
 let images = [];
+
+//2. fetch the images from external site via API
 fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
-    .then(response => response.json())
+    .then(response => response.json()) //3. parse the JSON response of API
     .then(data => {
+        //4. loop through JSON object and get url
         for(let i=0;i < 10; i++){
             let obj = data[i];
+            //5. store url in variable
             images.push(obj.url);
         }
     });
@@ -55,12 +53,4 @@ function slideToPrev(){
         let prevSlide = images[counter];
         imgTag.src = prevSlide;
     }
-}
-
-function slide(){
-    /** direction: next or previous slide */
-    /** currentSlide: which image (index of the images array is visible) */
-    /** container for that image: img-tag to replace the src attribute */
-    let currentSlide = images[counter];
-
 }
