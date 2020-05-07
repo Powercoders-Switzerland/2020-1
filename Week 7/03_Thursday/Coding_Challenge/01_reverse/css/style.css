@@ -1,0 +1,47 @@
+body{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align:center
+}
+
+h1 {
+    color: #333333;
+    font-size: 4em;
+    font-variant: small-caps;
+    margin: 0.5em;
+    text-align: center;
+}
+
+form {
+    background: rgba(0,0,0,0.05);
+    margin: 2em auto 4em;
+    max-width: 350px;
+    padding: 2em;
+    text-align: center;
+    width: auto;
+}
+
+label {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+input {
+    width: 70%;
+}
+
+#output{
+    display: block;
+    padding: 2em;
+    margin: 0 auto;
+
+    max-width: 350px;
+}
+

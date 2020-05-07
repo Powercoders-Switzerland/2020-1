@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <h1>Get news</h1>
+    <form id="search" method="get" onsubmit="return false;">
+        <p>
+            <input type="text" id="field" name="field">
+            <label for="field"><span>Search</span></label>
+        </p>
+        <p>sort by:
+            <input type="radio" name ="sort" value="recent" id="recentradio">
+            <label for="recentradio">date</label>
+            
+            <input type="radio" name ="sort" value="popular" id="popularradio" checked>
+            <label for="popularradio">popularity</label>
+        </p>
+    </form>
+    <ul id="results">
+
+    </ul>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+

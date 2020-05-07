@@ -1,0 +1,117 @@
+body{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333333;
+    font-size: 4em;
+    font-variant: small-caps;
+    margin: 0.5em;
+    text-align: center;
+}
+
+form {
+    background: rgba(0,0,0,0.05);
+    margin: 2em 2em 4em;
+    padding: 1em 2em 2em;
+    text-align: center;
+}
+
+form p {
+    margin: 0;
+}
+
+form p:first-child {
+    background: #CBCBCB;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+    z-index: 1;
+}
+
+input[type=text] {
+    width: calc(100% - 1.7em);
+    border: 1px solid #797693;
+    background: transparent;
+    color: #797693;
+    z-index: 10;
+    font-weight: 500;
+    position: relative;
+    display: block;
+    padding: 0.8em;
+    text-align: center;
+}
+
+input[type=text] + label {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+    color: #fff;
+}
+
+input[type=text] + label::before {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 12%;
+	left: 7px;
+	background: url(https://tympanus.net/Development/TextInputEffects/img/search.svg) no-repeat center center;
+	background-size: 100%;
+	-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.7,0,0.3,1);
+	transition: transform 0.4s cubic-bezier(0.7,0,0.3,1);
+}
+
+input[type=text]:focus + label::before, 
+input[type=text]:not(:empty) + label::before, 
+input[type=text].filled + label::before {
+    -webkit-transform: scale3d(38, 38, 1);
+    transform: scale3d(38, 38, 1);
+}
+
+label span {
+    display: block;
+    padding: 0.5em 0 0 3em;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.7,0,0.3,1);
+    transition: transform 0.4s cubic-bezier(0.7,0,0.3,1);
+}
+
+ul {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+#results {
+    list-style-type: none;
+    column-gap: 2em;
+    column-width: 20em;
+    margin: 2em;
+    padding: 0;
+}
+
+#results > li {
+    border-bottom: 1px solid #cccccc;
+    break-inside: avoid;
+    padding-bottom: 1.5em;
+    margin-bottom: 2em;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
